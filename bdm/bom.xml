@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.12.2">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Caracter">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="health" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="strength" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="dexterity" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="perception" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Resource" fetchType="LAZY" name="resource" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Card">
+            <fields>
+                <field type="STRING" length="255" name="type" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Options" fetchType="LAZY" name="options" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Cave">
+            <fields>
+                <field type="INTEGER" length="255" name="meat" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stick" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stone" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Effect">
+            <fields>
+                <field type="INTEGER" length="255" name="strength" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="dexterity" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="perception" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Options">
+            <fields>
+                <relationField type="COMPOSITION" reference="com.company.model.Requisite" fetchType="LAZY" name="requisite" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Reward" fetchType="LAZY" name="reward" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Requisite">
+            <fields>
+                <field type="INTEGER" length="255" name="meat" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stick" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stone" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="torch" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="rope" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="strength" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="dexterity" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="perception" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Resource">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="strength" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="dexterity" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="perception" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Reward">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="strength" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="dexterity" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="perception" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="meat" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stick" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stone" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
